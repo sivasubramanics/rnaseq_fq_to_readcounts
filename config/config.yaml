@@ -2,7 +2,7 @@ reference:
   fasta: "data/chr22.fna"
   gtf: "chr22.gtf"
 metadata: "config/metadata.tsv"
-threads: 8
+threads: 12
 min_len: 55
 min_qual: 20
 sjdbOverhang: 100
