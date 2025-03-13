@@ -1,0 +1,8 @@
+name: reference
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - star
+  - samtools

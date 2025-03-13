@@ -1,0 +1,7 @@
+run    sample    fq1    fq2
+HBR_Rep1    HBR_Rep1    /Users/selva001/git/rnaseq_fq_to_readcounts/data/HBR_Rep1_1.fastq.gz    /Users/selva001/git/rnaseq_fq_to_readcounts/data/HBR_Rep1_2.fastq.gz
+HBR_Rep2    HBR_Rep2    /Users/selva001/git/rnaseq_fq_to_readcounts/data/HBR_Rep2_1.fastq.gz    /Users/selva001/git/rnaseq_fq_to_readcounts/data/HBR_Rep2_2.fastq.gz
+HBR_Rep3    HBR_Rep3    /Users/selva001/git/rnaseq_fq_to_readcounts/data/HBR_Rep3_1.fastq.gz    /Users/selva001/git/rnaseq_fq_to_readcounts/data/HBR_Rep3_2.fastq.gz
+UHR_Rep1    UHR_Rep1    /Users/selva001/git/rnaseq_fq_to_readcounts/data/UHR_Rep1_1.fastq.gz    /Users/selva001/git/rnaseq_fq_to_readcounts/data/UHR_Rep1_2.fastq.gz
+UHR_Rep2    UHR_Rep2    /Users/selva001/git/rnaseq_fq_to_readcounts/data/UHR_Rep2_1.fastq.gz    /Users/selva001/git/rnaseq_fq_to_readcounts/data/UHR_Rep2_2.fastq.gz
+UHR_Rep3    UHR_Rep3    /Users/selva001/git/rnaseq_fq_to_readcounts/data/UHR_Rep3_1.fastq.gz    /Users/selva001/git/rnaseq_fq_to_readcounts/data/UHR_Rep3_2.fastq.gz

@@ -1,0 +1,8 @@
+name: quantify
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - subread
+  - htseq
