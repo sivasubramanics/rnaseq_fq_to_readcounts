@@ -2,8 +2,8 @@
 # rule to map reads to the reference genome using STAR
 rule pass_one:
     input:
-        fq1="work/fastp/{sample}.{run}.1.fastq.gz",
-        fq2="work/fastp/{sample}.{run}.2.fastq.gz",
+        fq1="work/sortmerna/{sample}.{run}.1.fastq.gz",
+        fq2="work/sortmerna/{sample}.{run}.2.fastq.gz",
         genome="work/star_index/Genome"
     output:
         "work/alignment/pass_one/{sample}.{run}.Aligned.out.bam",
@@ -38,8 +38,8 @@ rule filter_junctions:
 
 rule pass_two:
     input:
-        fq1="work/fastp/{sample}.{run}.1.fastq.gz",
-        fq2="work/fastp/{sample}.{run}.2.fastq.gz",
+        fq1="work/sortmerna/{sample}.{run}.1.fastq.gz",
+        fq2="work/sortmerna/{sample}.{run}.2.fastq.gz",
         genome="work/star_index_2/Genome"
     output:
         "work/alignment/pass_two/{sample}.{run}.Aligned.sortedByCoord.out.bam"
