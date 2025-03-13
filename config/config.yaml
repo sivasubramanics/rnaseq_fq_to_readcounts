@@ -1,10 +1,10 @@
 reference:
-  fasta: "/Users/selva001/git/rnaseq_fq_to_readcounts/data/chr22.fna"
-  gtf: "/Users/selva001/git/rnaseq_fq_to_readcounts/data/chr22.gtf"
-metadata: "/Users/selva001/git/rnaseq_fq_to_readcounts/config/metadata.tsv"
+  fasta: "data/chr22.fna"
+  gtf: "chr22.gtf"
+metadata: "config/metadata.tsv"
 threads: 8
 min_len: 55
 min_qual: 20
 sjdbOverhang: 100
 genomeSAindexNbases: 12
-tmpdir: "/Users/selva001/git/rnaseq_fq_to_readcounts/tmp"
+tmpdir: "tmp"
