@@ -17,5 +17,5 @@ include: "rules/sortmerna.smk"
 
 rule all:
     input:
-        "work/count_table/feature_counts.txt",
-        "work/count_table/htseq_counts.txt"
+        "work/count_table/feature_counts_parsed.txt",
+        "work/count_table/htseq_counts_parsed.txt"
