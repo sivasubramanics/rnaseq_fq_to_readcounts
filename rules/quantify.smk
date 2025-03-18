@@ -68,4 +68,4 @@ rule parse_htseq_counts:
     shell:
         ("""sed 's/work\/merged_bams\///g' {input} | \
             sed 's/\.bam//g' | \
-            awk 'BEGIN{{FS=OFS=\"\\t\"}}{{if(NR==1){{$1="Geneid"; print $0}}else{{if($1!~/^--/){{print}}}}}}' > {output} 2> {log}""")
+            awk 'BEGIN{{FS=OFS=\"\\t\"}}{{if(NR==1){{$1="Geneid"; print $0}}else{{if($1!~/^__/){{print}}}}}}' > {output} 2> {log}""")
