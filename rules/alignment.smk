@@ -42,7 +42,7 @@ rule pass_two:
         fq2="work/sortmerna/{sample}.{run}.2.fastq.gz",
         genome="work/star_index_2/Genome"
     output:
-        "work/alignment/pass_two/{sample}.{run}.Aligned.sortedByCoord.out.bam"
+        "work/alignment/pass_two/{sample}.{run}.Aligned.out.bam"
     threads:
         config["threads"]
     resources:
@@ -65,7 +65,7 @@ rule pass_two:
 
 rule merge_and_sort_bams:
     input:
-        lambda wildcards: expand("work/alignment/pass_two/{sample}.{run}.Aligned.sortedByCoord.out.bam",
+        lambda wildcards: expand("work/alignment/pass_two/{sample}.{run}.Aligned.out.bam",
                                  sample=wildcards.sample,
                                  run=data[wildcards.sample].keys())
     output:
