@@ -59,7 +59,7 @@ rule pass_two:
             --genomeDir work/star_index_2/ \
             --readFilesIn {input.fq1} {input.fq2} \
             --outFileNamePrefix work/alignment/pass_two/{wildcards.sample}.{wildcards.run}. \
-            --outSAMtype BAM SortedByCoordinate \
+            --outSAMtype BAM Unsorted \
             --readFilesCommand gunzip -c \
             --outSAMunmapped Within > {log} 2>&1")
 
