@@ -27,7 +27,10 @@ rule parse_feature_counts:
     log:
         "logs/parse_feature_counts.log"
     shell:
-        ("cut -f 1,7- {input} | tail -n +2 | sed 's/work\/merged_bams\///g' | sed 's/\.bam//g' > {output} 2> {log}")
+        ("cut -f 1,7- {input} | \
+            tail -n +2 | \
+            sed 's/work\/merged_bams\///g' | \
+            sed 's/\.bam//g' > {output} 2> {log}")
 
 rule htseq_counts:
     input:
@@ -63,4 +66,6 @@ rule parse_htseq_counts:
     log:
         "logs/parse_htseq_counts.log"
     shell:
-        ("sed 's/work\/merged_bams\///g' {input} | sed 's/\.bam//g' | awk 'BEGIN{{FS=OFS=\"\t\"}}{{if(NR==1){print \"Geneid\"$0}else{print}}}' > {output} 2> {log}")
+        ("""sed 's/work\/merged_bams\///g' {input} | \
+            sed 's/\.bam//g' | \
+            awk 'BEGIN{{FS=OFS=\"\\t\"}}{{if(NR==1){{print \"Geneid\",$0}}else{{print}}}}' > {output} 2> {log}""")
