@@ -20,7 +20,9 @@ rule sortmerna:
         "work/fastp/{sample}.{run}.2.fastq.gz"
     output:
         "work/sortmerna/{sample}.{run}.1.fastq.gz",
-        "work/sortmerna/{sample}.{run}.2.fastq.gz"
+        "work/sortmerna/{sample}.{run}.2.fastq.gz",
+        "work/sortmerna/{sample}.{run}.rrna.1.fastq.gz",
+        "work/sortmerna/{sample}.{run}.rrna.2.fastq.gz"
     params:
         workdir = "work/sortmerna/{sample}.{run}",
         ref = get_rRNA_references("data/rRNA_databases/")
@@ -39,4 +41,6 @@ rule sortmerna:
          "--fastx > {log} 2>&1 && "
             "mv {params.workdir}/out/other_fwd.fq.gz {output[0]} && "
             "mv {params.workdir}/out/other_rev.fq.gz {output[1]} && "
+            "mv {params.workdir}/out/aligned_fwd.fq.gz {output[2]} && "
+            "mv {params.workdir}/out/aligned_rev.fq.gz {output[3]} && "
             "rm -rf {params.workdir}")
